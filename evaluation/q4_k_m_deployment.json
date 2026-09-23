@@ -1,0 +1,33 @@
+{
+  "format": "Q4_K_M",
+  "n": 500,
+  "argmax_agreement": 0.914,
+  "cuda_same_subset": {
+    "accuracy": 0.7910177949703642,
+    "macro_f1": 0.7760857891780776,
+    "nll": 0.6000106706289864,
+    "brier": 0.317876961372947,
+    "ece": 0.16696329399611096
+  },
+  "gguf_same_subset": {
+    "accuracy": 0.7818348025857907,
+    "macro_f1": 0.764930756852403,
+    "nll": 0.6474576399658714,
+    "brier": 0.3418843970562367,
+    "ece": 0.17704328656854143
+  },
+  "accuracy_difference": -0.00918299238457343,
+  "nll_difference": 0.04744696933688497,
+  "temperature_folded": true,
+  "runtime_temperature": 1.0,
+  "calibration_n": 3100,
+  "criteria": {
+    "agreement_min": 0.9,
+    "accuracy_loss_max": 0.03,
+    "nll_increase_max": 0.1
+  },
+  "calibration_backend": "llama.cpp batched, checked against native readout",
+  "evaluation_backend": "llama.cpp native single-sequence exact option logits",
+  "weight_bytes": 1274388384,
+  "passed": true
+}

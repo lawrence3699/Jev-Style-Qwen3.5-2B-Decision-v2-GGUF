@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "model": "Jev-Style-v2-BF16-Calibrated.gguf",
+  "cases": [
+    {
+      "options": 2,
+      "choice": "positive",
+      "candidate_count": 64,
+      "max_probability_difference_vs_native": 5.900205922393376e-06
+    },
+    {
+      "options": 4,
+      "choice": "science and technology",
+      "candidate_count": 64,
+      "max_probability_difference_vs_native": 0.0006067566569580851
+    },
+    {
+      "options": 5,
+      "choice": "neutral",
+      "candidate_count": 64,
+      "max_probability_difference_vs_native": 0.001473201814370717
+    }
+  ],
+  "server": "version: 0.4.1 (build 10964, commit b29c606e2)\nbuilt with AppleClang 17.0.0.17000604 for Darwin arm64"
+}

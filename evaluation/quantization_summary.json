@@ -1,0 +1,150 @@
+{
+  "evaluation_decisions": 500,
+  "comparison": "same frozen subset vs CUDA merged BF16",
+  "metric": "real-label task-macro accuracy; teacher-reference decisions excluded from this macro",
+  "variants": {
+    "Q4_K_M": {
+      "filename": "Jev-Style-v2-Q4_K_M-Calibrated.gguf",
+      "weight_bytes": 1274388384,
+      "sha256": "c697d3b29d07fdd37b6ebeb5c98066f4c31632162adca6258db23f75184eb0c4",
+      "argmax_agreement": 0.914,
+      "real_label_macro_accuracy": 0.7818348025857907,
+      "real_label_macro": {
+        "accuracy": 0.7818348025857907,
+        "macro_f1": 0.764930756852403,
+        "nll": 0.6474576399658714,
+        "brier": 0.3418843970562367,
+        "ece": 0.17704328656854143
+      },
+      "calibration_n": 3100,
+      "temperature_folded": true,
+      "runtime_temperature": 1.0,
+      "validation": {
+        "format": "Q4_K_M",
+        "n": 500,
+        "argmax_agreement": 0.914,
+        "cuda_same_subset": {
+          "accuracy": 0.7910177949703642,
+          "macro_f1": 0.7760857891780776,
+          "nll": 0.6000106706289864,
+          "brier": 0.317876961372947,
+          "ece": 0.16696329399611096
+        },
+        "gguf_same_subset": {
+          "accuracy": 0.7818348025857907,
+          "macro_f1": 0.764930756852403,
+          "nll": 0.6474576399658714,
+          "brier": 0.3418843970562367,
+          "ece": 0.17704328656854143
+        },
+        "accuracy_difference": -0.00918299238457343,
+        "nll_difference": 0.04744696933688497,
+        "temperature_folded": true,
+        "runtime_temperature": 1.0,
+        "calibration_n": 3100,
+        "criteria": {
+          "agreement_min": 0.9,
+          "accuracy_loss_max": 0.03,
+          "nll_increase_max": 0.1
+        },
+        "calibration_backend": "llama.cpp batched, checked against native readout",
+        "evaluation_backend": "llama.cpp native single-sequence exact option logits",
+        "weight_bytes": 1274388384,
+        "passed": true
+      }
+    },
+    "Q8_0": {
+      "filename": "Jev-Style-v2-Q8_0-Calibrated.gguf",
+      "weight_bytes": 2012004256,
+      "sha256": "5c2aa0d35b24a27f03228b2c62ebaaebd9b5b785844634d4217278d822751494",
+      "argmax_agreement": 0.992,
+      "real_label_macro_accuracy": 0.7868855635654054,
+      "real_label_macro": {
+        "accuracy": 0.7868855635654054,
+        "macro_f1": 0.773615445189482,
+        "nll": 0.6015417570028033,
+        "brier": 0.318930434743987,
+        "ece": 0.16630794459650552
+      },
+      "calibration_n": 3100,
+      "temperature_folded": true,
+      "runtime_temperature": 1.0,
+      "validation": {
+        "n": 500,
+        "argmax_agreement": 0.992,
+        "cuda_same_subset": {
+          "accuracy": 0.7910177949703642,
+          "macro_f1": 0.7760857891780776,
+          "nll": 0.6000106706289864,
+          "brier": 0.317876961372947,
+          "ece": 0.16696329399611096
+        },
+        "q8_same_subset": {
+          "accuracy": 0.7868855635654054,
+          "macro_f1": 0.773615445189482,
+          "nll": 0.6015417570028033,
+          "brier": 0.318930434743987,
+          "ece": 0.16630794459650552
+        },
+        "accuracy_difference": -0.004132231404958775,
+        "nll_difference": 0.0015310863738169367,
+        "temperature_folded": true,
+        "passed": true,
+        "practical_deployment_gate_passed": true,
+        "initial_strict_accuracy_target_met_on_subset": false,
+        "initial_accuracy_loss_target": 0.003,
+        "note": "500-example subset check: 99.2% agreement. Observed task-macro loss is 0.413 pp, so the initial 0.3 pp accuracy goal is not met on this subset. Prefer BF16/MLX when accuracy is the priority; this is not a bound on population degradation."
+      }
+    },
+    "BF16": {
+      "filename": "Jev-Style-v2-BF16-Calibrated.gguf",
+      "weight_bytes": 3775700896,
+      "sha256": "8baa111eec6e30a5c9e97d559b53127a19ef30171e8aed26673153b4f77adcbb",
+      "argmax_agreement": 0.996,
+      "real_label_macro_accuracy": 0.7936151975677668,
+      "real_label_macro": {
+        "accuracy": 0.7936151975677668,
+        "macro_f1": 0.77850284511292,
+        "nll": 0.6007551256850553,
+        "brier": 0.31813150017828207,
+        "ece": 0.16639447171288832
+      },
+      "calibration_n": 3100,
+      "temperature_folded": true,
+      "runtime_temperature": 1.0,
+      "validation": {
+        "format": "BF16",
+        "n": 500,
+        "argmax_agreement": 0.996,
+        "cuda_same_subset": {
+          "accuracy": 0.7910177949703642,
+          "macro_f1": 0.7760857891780776,
+          "nll": 0.6000106706289864,
+          "brier": 0.317876961372947,
+          "ece": 0.16696329399611096
+        },
+        "gguf_same_subset": {
+          "accuracy": 0.7936151975677668,
+          "macro_f1": 0.77850284511292,
+          "nll": 0.6007551256850553,
+          "brier": 0.31813150017828207,
+          "ece": 0.16639447171288832
+        },
+        "accuracy_difference": 0.0025974025974025983,
+        "nll_difference": 0.0007444550560689045,
+        "temperature_folded": true,
+        "runtime_temperature": 1.0,
+        "calibration_n": 3100,
+        "criteria": {
+          "agreement_min": 0.99,
+          "accuracy_loss_max": 0.005,
+          "nll_increase_max": 0.015
+        },
+        "calibration_backend": "llama.cpp batched, checked against native readout",
+        "evaluation_backend": "llama.cpp native single-sequence exact option logits",
+        "weight_bytes": 3775700896,
+        "passed": true
+      }
+    }
+  }
+}

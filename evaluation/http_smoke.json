@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "options": 2,
+      "choice": "positive",
+      "candidate_count": 64,
+      "max_probability_difference_vs_native": 7.650678379711451e-08
+    },
+    {
+      "options": 4,
+      "choice": "science and technology",
+      "candidate_count": 64,
+      "max_probability_difference_vs_native": 3.4161285047654318e-06
+    },
+    {
+      "options": 5,
+      "choice": "neutral",
+      "candidate_count": 64,
+      "max_probability_difference_vs_native": 6.717687878710077e-05
+    }
+  ],
+  "server": ""
+}

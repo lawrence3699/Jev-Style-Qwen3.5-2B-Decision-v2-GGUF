@@ -1,0 +1,56 @@
+{
+  "temperature": 1.0,
+  "fitted_temperature_folded": 1.0408715111841746,
+  "temperature_folded": true,
+  "folded_tensor": "output_norm.weight",
+  "source_calibration": {
+    "temperature": 1.0408715111841746,
+    "calibration_n": 3100,
+    "objective": "sample_mean_soft_cross_entropy",
+    "bounds": [
+      0.05,
+      20
+    ],
+    "nll_before": 0.5144028513612269,
+    "nll_after": 0.5140996476734587,
+    "backend": "gguf",
+    "model": "source_project/h100_v2/results/Jev-Style-v2-BF16-uncalibrated.gguf",
+    "source_sha256": "2fde7f45dce3440abfde145bb30ad61e2643b1f853866b5760b235685328dc1c"
+  },
+  "input_sha256": "79fb883ffc5831f165c11ca0119c7702b3c5209c916d939f2555fb1c7d45413c",
+  "output_sha256": "8baa111eec6e30a5c9e97d559b53127a19ef30171e8aed26673153b4f77adcbb",
+  "validation_required": false,
+  "validation": {
+    "format": "BF16",
+    "n": 500,
+    "argmax_agreement": 0.996,
+    "cuda_same_subset": {
+      "accuracy": 0.7910177949703642,
+      "macro_f1": 0.7760857891780776,
+      "nll": 0.6000106706289864,
+      "brier": 0.317876961372947,
+      "ece": 0.16696329399611096
+    },
+    "gguf_same_subset": {
+      "accuracy": 0.7936151975677668,
+      "macro_f1": 0.77850284511292,
+      "nll": 0.6007551256850553,
+      "brier": 0.31813150017828207,
+      "ece": 0.16639447171288832
+    },
+    "accuracy_difference": 0.0025974025974025983,
+    "nll_difference": 0.0007444550560689045,
+    "temperature_folded": true,
+    "runtime_temperature": 1.0,
+    "calibration_n": 3100,
+    "criteria": {
+      "agreement_min": 0.99,
+      "accuracy_loss_max": 0.005,
+      "nll_increase_max": 0.015
+    },
+    "calibration_backend": "llama.cpp batched, checked against native readout",
+    "evaluation_backend": "llama.cpp native single-sequence exact option logits",
+    "weight_bytes": 3775700896,
+    "passed": true
+  }
+}
