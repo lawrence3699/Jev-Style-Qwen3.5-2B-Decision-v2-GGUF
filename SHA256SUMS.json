@@ -12,8 +12,8 @@
     "sha256": "50cbab8a892c5f2993b8c7351a99182507472def3b1374558308605d99b86b32"
   },
   "README.md": {
-    "bytes": 12086,
-    "sha256": "5d8614413dc1583b450b81ebeee569907a023c4c65d5752dd318f542b9071577"
+    "bytes": 12508,
+    "sha256": "406e98c0183ed8033b9c5db744454f06c5a45321b82aa024f3051949f65be2ae"
   },
   "evaluation/baseline_sensitivity.json": {
     "bytes": 2015,
@@ -122,5 +122,13 @@
   "evaluation/bf16_http_smoke.json": {
     "bytes": 690,
     "sha256": "d729e4dd7ab5d425e5eb031ca1dc92d74302a7971d9aeeba782c15e4904a5f59"
+  },
+  "template": {
+    "bytes": 91,
+    "sha256": "244d5cfdeb97383239af17d352fc32c2123257b2eecda8fd8285a7cd29770648"
+  },
+  "params": {
+    "bytes": 31,
+    "sha256": "208f455e3685ae841dea00e45a06d3b7fd226a0fbf88e6f2cd1077ff8e6b36af"
   }
 }

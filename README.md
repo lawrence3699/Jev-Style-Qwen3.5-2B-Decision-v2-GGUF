@@ -154,6 +154,14 @@ Use a llama.cpp build with Qwen3.5 support. Conversion and native evaluation use
 
 **Runtime calibration temperature is 1.0** for this file: its fitted temperature has already been incorporated. The accompanying calibration JSON records the exact settings and checksum. Serve the raw decision prompt shown below, with the full declared option list.
 
+### Ollama
+
+```bash
+ollama run hf.co/chaoliangUNSW/Jev-Style-Qwen3.5-2B-Decision-v2-GGUF:Q4_K_M
+```
+
+Send the raw decision prompt shown below as the message; the model replies with the letter of the selected option (` B` for the example). Replace `Q4_K_M` with `Q8_0` or `BF16` for another precision. This repository supplies its own Ollama template, so run `ollama pull` again if you pulled the model before 2026-09-25.
+
 
 ## Decision interface
 
