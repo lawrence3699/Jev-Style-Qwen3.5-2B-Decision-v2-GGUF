@@ -4,11 +4,13 @@ This repository mirrors the public Hugging Face model at:
 
 <https://huggingface.co/chaoliangUNSW/Jev-Style-Qwen3.5-2B-Decision-v2-GGUF>
 
-Files smaller than 100 MiB are stored on the `main` branch. Larger model files are attached to this GitHub Release:
+Snapshot of Hugging Face revision `e9a1bbe81f216cb606893412690c26f42cd67c6f`.
+
+Files smaller than 100 MiB are stored on the `main` branch. Larger files are attached to this GitHub Release:
 
 <https://github.com/lawrence3699/Jev-Style-Qwen3.5-2B-Decision-v2-GGUF/releases/tag/huggingface-snapshot-2026-09-24>
 
-See `RELEASE_ASSETS.tsv` for asset names, original paths, sizes, and SHA-256 checksums.
+See `RELEASE_ASSETS.tsv` for asset names, original paths, sizes, and SHA-256 checksums. Asset names use `__` in place of `/` for files stored in subfolders.
 
 ## Reassembling split files
 

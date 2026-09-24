@@ -4,7 +4,8 @@
   "metric": "real-label task-macro accuracy; teacher-reference decisions excluded from this macro",
   "variants": {
     "Q4_K_M": {
-      "filename": "Jev-Style-v2-Q4_K_M-Calibrated.gguf",
+      "filename": "Jev-Style-v2-Calibrated-Q4_K_M.gguf",
+      "build_filename": "Jev-Style-v2-Q4_K_M-Calibrated.gguf",
       "weight_bytes": 1274388384,
       "sha256": "c697d3b29d07fdd37b6ebeb5c98066f4c31632162adca6258db23f75184eb0c4",
       "argmax_agreement": 0.914,
@@ -54,7 +55,8 @@
       }
     },
     "Q8_0": {
-      "filename": "Jev-Style-v2-Q8_0-Calibrated.gguf",
+      "filename": "Jev-Style-v2-Calibrated-Q8_0.gguf",
+      "build_filename": "Jev-Style-v2-Q8_0-Calibrated.gguf",
       "weight_bytes": 2012004256,
       "sha256": "5c2aa0d35b24a27f03228b2c62ebaaebd9b5b785844634d4217278d822751494",
       "argmax_agreement": 0.992,
@@ -97,7 +99,8 @@
       }
     },
     "BF16": {
-      "filename": "Jev-Style-v2-BF16-Calibrated.gguf",
+      "filename": "Jev-Style-v2-Calibrated-BF16.gguf",
+      "build_filename": "Jev-Style-v2-BF16-Calibrated.gguf",
       "weight_bytes": 3775700896,
       "sha256": "8baa111eec6e30a5c9e97d559b53127a19ef30171e8aed26673153b4f77adcbb",
       "argmax_agreement": 0.996,
@@ -146,5 +149,6 @@
         "passed": true
       }
     }
-  }
+  },
+  "filename_note": "filename is the current published name; build_filename is the name used when the file was validated (renamed 2026-09-24 for Ollama quant tags; bytes and sha256 unchanged)."
 }

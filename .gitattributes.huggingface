@@ -39,3 +39,6 @@ figures/calibration.png filter=lfs diff=lfs merge=lfs -text
 figures/robustness.png filter=lfs diff=lfs merge=lfs -text
 Jev-Style-v2-Q4_K_M-Calibrated.gguf filter=lfs diff=lfs merge=lfs -text
 Jev-Style-v2-BF16-Calibrated.gguf filter=lfs diff=lfs merge=lfs -text
+Jev-Style-v2-Calibrated-Q4_K_M.gguf filter=lfs diff=lfs merge=lfs -text
+Jev-Style-v2-Calibrated-Q8_0.gguf filter=lfs diff=lfs merge=lfs -text
+Jev-Style-v2-Calibrated-BF16.gguf filter=lfs diff=lfs merge=lfs -text

@@ -16,6 +16,8 @@ tags:
 ---
 # Jev-Style-Qwen3.5-2B-Decision v2 (GGUF)
 
+**Website:** [jevstyle.com](https://jevstyle.com/#v2) — all JevStyle decision models, benchmarks and quickstart in one place.
+
 A **Jev-style decision model** for classification, routing and typed choices. Give it a state, a question and a list of options; one prefill returns a selected option **with calibrated probabilities**.
 
 | Build | Weight size | Inference |
@@ -28,9 +30,9 @@ A **Jev-style decision model** for classification, routing and typed choices. Gi
 
 | Precision | File size | Choice agreement | Macro accuracy |
 |---|---:|---:|---:|
-| [Q4_K_M](https://huggingface.co/chaoliangUNSW/Jev-Style-Qwen3.5-2B-Decision-v2-GGUF/resolve/main/Jev-Style-v2-Q4_K_M-Calibrated.gguf?download=true) | 1.27 GB | 91.4% | 78.18% |
-| [Q8_0](https://huggingface.co/chaoliangUNSW/Jev-Style-Qwen3.5-2B-Decision-v2-GGUF/resolve/main/Jev-Style-v2-Q8_0-Calibrated.gguf?download=true) | 2.01 GB | 99.2% | 78.69% |
-| [BF16](https://huggingface.co/chaoliangUNSW/Jev-Style-Qwen3.5-2B-Decision-v2-GGUF/resolve/main/Jev-Style-v2-BF16-Calibrated.gguf?download=true) | 3.78 GB | 99.6% | 79.36% |
+| [Q4_K_M](https://huggingface.co/chaoliangUNSW/Jev-Style-Qwen3.5-2B-Decision-v2-GGUF/resolve/main/Jev-Style-v2-Calibrated-Q4_K_M.gguf?download=true) | 1.27 GB | 91.4% | 78.18% |
+| [Q8_0](https://huggingface.co/chaoliangUNSW/Jev-Style-Qwen3.5-2B-Decision-v2-GGUF/resolve/main/Jev-Style-v2-Calibrated-Q8_0.gguf?download=true) | 2.01 GB | 99.2% | 78.69% |
+| [BF16](https://huggingface.co/chaoliangUNSW/Jev-Style-Qwen3.5-2B-Decision-v2-GGUF/resolve/main/Jev-Style-v2-Calibrated-BF16.gguf?download=true) | 3.78 GB | 99.6% | 79.36% |
 
 All three files include independently fitted calibration; use **runtime temperature 1.0**. Agreement is against CUDA merged BF16 on the same frozen 500-decision subset; accuracy is the task-macro average over its real-label examples. [Full precision comparison](evaluation/quantization_summary.json).
 
@@ -134,7 +136,7 @@ The benchmark figures describe the fixed CUDA reference comparison. Reliability 
 python -m pip install -U huggingface_hub
 hf download chaoliangUNSW/Jev-Style-Qwen3.5-2B-Decision-v2-GGUF --local-dir jev-v2-gguf
 cd jev-v2-gguf
-llama-server -m Jev-Style-v2-Q8_0-Calibrated.gguf -c 2048 -ngl 99 --port 8080
+llama-server -m Jev-Style-v2-Calibrated-Q8_0.gguf -c 2048 -ngl 99 --port 8080
 ```
 
 In another terminal, from the same directory:
@@ -146,7 +148,7 @@ python jev_decision_client.py --url http://127.0.0.1:8080 \
   --options negative positive
 ```
 
-The quick-start command selects Q8_0. To use Q4_K_M or BF16, replace its model filename with `Jev-Style-v2-Q4_K_M-Calibrated.gguf` or `Jev-Style-v2-BF16-Calibrated.gguf`.
+The quick-start command selects Q8_0. To use Q4_K_M or BF16, replace its model filename with `Jev-Style-v2-Calibrated-Q4_K_M.gguf` or `Jev-Style-v2-Calibrated-BF16.gguf`.
 
 Use a llama.cpp build with Qwen3.5 support. Conversion and native evaluation used commit `b29c606e28a01b1bc8c1351026a0fa6e616bf6c4`. The client uses the native `/completion` endpoint, requests complete declared-option log-probabilities and increases the candidate count as needed. The supplied `gguf_logits.cpp` reads all declared-option logits directly through the C API.
 
@@ -189,6 +191,6 @@ Apache-2.0. See [LICENSE](LICENSE). This release builds on Qwen3.5-2B-Base and J
 
 ## Contact
 
-I welcome internship, employment, and research collaboration opportunities. Please contact me at [**yanhcaoliang369@gmail.com**](mailto:yanhcaoliang369@gmail.com).
+I welcome internship, employment, and research collaboration opportunities. Please contact me at [**yanchaoliang369@gmail.com**](mailto:yanchaoliang369@gmail.com).
 
-欢迎提供实习、工作及科研合作机会，请邮件联系：[yanhcaoliang369@gmail.com](mailto:yanhcaoliang369@gmail.com)。
+欢迎提供实习、工作及科研合作机会，请邮件联系：[yanchaoliang369@gmail.com](mailto:yanchaoliang369@gmail.com)。

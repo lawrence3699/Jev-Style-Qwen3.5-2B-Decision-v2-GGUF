@@ -1,9 +1,9 @@
 {
-  "Jev-Style-v2-Q8_0-Calibrated.calibration.json": {
+  "Jev-Style-v2-Calibrated-Q8_0.calibration.json": {
     "bytes": 1807,
     "sha256": "7f3ae96ebf0271483365b8941124f3be9521e9e3ed4c3d62240e51c9b416ebb4"
   },
-  "Jev-Style-v2-Q8_0-Calibrated.gguf": {
+  "Jev-Style-v2-Calibrated-Q8_0.gguf": {
     "bytes": 2012004256,
     "sha256": "5c2aa0d35b24a27f03228b2c62ebaaebd9b5b785844634d4217278d822751494"
   },
@@ -12,8 +12,8 @@
     "sha256": "50cbab8a892c5f2993b8c7351a99182507472def3b1374558308605d99b86b32"
   },
   "README.md": {
-    "bytes": 11957,
-    "sha256": "37b0885c870ef69cf315d4e8bdae3e09c81972f0fd70d4417284fef50a83ddda"
+    "bytes": 12086,
+    "sha256": "5d8614413dc1583b450b81ebeee569907a023c4c65d5752dd318f542b9071577"
   },
   "evaluation/baseline_sensitivity.json": {
     "bytes": 2015,
@@ -84,18 +84,18 @@
     "sha256": "2a4e163354b0d0d31bf5fcdfcfbcf726fb152fb2f6419432ddddaec3b475a921"
   },
   "evaluation/quantization_summary.json": {
-    "bytes": 5465,
-    "sha256": "45c350f225f9a403d036d96a80ef14ca9cd89bb9c25af82617071833846eefd6"
+    "bytes": 5844,
+    "sha256": "9ec0233027766c2104450fa45d2a7c4cfea66fcde786d5ad699691e81d9f2030"
   },
   "evaluation/calibration_batch_parity.json": {
     "bytes": 147,
     "sha256": "1f819d59b9ebf6ffb79953832c3f7ae4564d7bae7fa68209b6583a9d92db2bf5"
   },
-  "Jev-Style-v2-Q4_K_M-Calibrated.gguf": {
+  "Jev-Style-v2-Calibrated-Q4_K_M.gguf": {
     "bytes": 1274388384,
     "sha256": "c697d3b29d07fdd37b6ebeb5c98066f4c31632162adca6258db23f75184eb0c4"
   },
-  "Jev-Style-v2-Q4_K_M-Calibrated.calibration.json": {
+  "Jev-Style-v2-Calibrated-Q4_K_M.calibration.json": {
     "bytes": 1824,
     "sha256": "4a5abb23d86ddd44b8b6b1054b48a0a9c40560cc0ee3edd24ae6be8e623ad5f1"
   },
@@ -107,11 +107,11 @@
     "bytes": 694,
     "sha256": "5a0e2b0696e3aa918aff6e8ad2ebf1532091edf81a10815bf3add221c36932d3"
   },
-  "Jev-Style-v2-BF16-Calibrated.gguf": {
+  "Jev-Style-v2-Calibrated-BF16.gguf": {
     "bytes": 3775700896,
     "sha256": "8baa111eec6e30a5c9e97d559b53127a19ef30171e8aed26673153b4f77adcbb"
   },
-  "Jev-Style-v2-BF16-Calibrated.calibration.json": {
+  "Jev-Style-v2-Calibrated-BF16.calibration.json": {
     "bytes": 1840,
     "sha256": "e5eb54d405d213c751ba61b334a8370d03332c915d9c49725da3b7a6ee295109"
   },
